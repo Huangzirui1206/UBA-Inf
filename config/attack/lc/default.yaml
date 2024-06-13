@@ -1,0 +1,7 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.06
+attack: label_consistent
+cratio: 0.18
+add_cover: 0
+reduced_amplitude: 1

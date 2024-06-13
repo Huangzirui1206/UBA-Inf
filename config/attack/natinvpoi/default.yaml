@@ -1,0 +1,20 @@
+attack_label_trans: all2one
+attack_target: 2
+pratio: 0.005
+attack: natinvpoi
+narcissus_noise_path: ../resource/narcissus/checkpoint/narcissus_noise_cls_2.npy
+netg_path: ../resource/natsteg/checkpoint/netg_conv_result.pth
+alpha: 3
+add_trigger_method: additive
+gen_type: conv
+batch_size: 150
+random_seed: 65
+gamma: 0.5
+beta: 0.8
+beta_h: 0.3
+eps: 0.1255 # 32/255
+epoch: 200
+lr: 0.1
+### For naive cover test, useless here
+cratio: 0
+add_cover: 0

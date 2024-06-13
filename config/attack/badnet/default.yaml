@@ -1,0 +1,7 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.004
+attack: badnet
+patch_mask_path: ../resource/badnet/trigger_image_grid.png
+add_cover: 0
+cratio: 0.008

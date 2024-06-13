@@ -1,0 +1,26 @@
+outdir: ../record/influence_result
+result_folder: 
+result_name: attack_result.pt
+seed: 42
+device: cuda:0
+dataset: cifar10
+test_sample_num_per_class: 0
+test_start_index: 0
+recursion_depth: 5000
+r_averaging: 10
+scale: 10.0
+damp: 0.01
+calc_method: img_wise
+log_filename: 
+model: resnet18
+num_workers: 4
+pin_memory: True
+non_blocking: True
+client_optimizer: sgd
+batch_size: 128
+train_data_index: bd
+save_hvp: 0
+save_inf: 0
+test_dataset: train
+test_data_indices: bd;start:0;len:1
+mini_batch_size: 1

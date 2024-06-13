@@ -1,0 +1,6 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.015
+attack: lowFrequency
+cratio: 0.15
+add_cover: 0

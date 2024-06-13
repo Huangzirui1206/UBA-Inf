@@ -1,0 +1,23 @@
+amp: False
+device: cuda:0
+client_optimizer: sgd
+dataset_path: ../../data
+frequency_save: 100
+batch_size: 128
+lr: 0.005
+lr_scheduler: CosineAnnealingLR
+random_seed: 0
+sgd_momentum: 0.9
+wd: 0.0005
+epochs: 100
+clean_ratio: 0.1
+result_folder: 
+result_name: attack_result.pt
+num_workers: 4
+pin_memory: True
+non_blocking: True
+scale: 1.0
+damp: 0.0
+mini_batch_size: 1
+ft_epochs: 20
+ap_epochs: 10

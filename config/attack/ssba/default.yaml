@@ -1,0 +1,6 @@
+attack_label_trans: all2one
+attack_target: 0
+pratio: 0.05
+cratio: 0.20
+attack: SSBA
+add_cover: 0
