@@ -101,8 +101,8 @@ You can also implement other unlearning algorithms for further evaluation yourse
 The UBA-Inf can be defined as a composition of four stages as indicated in the figure above, including *camouflage generation*, *trigger injection*, *backdoor activation*, and *backdoor exploitation*.
 
 - The camouflage generation stage is a key improvement of UBA. In conventional backdoor attacks, only backdoor samples are generated. In UBA, camouflage samples are crafted along with backdoor samples for fine-grained activation control and stealthiness purposes.
-- The trigger injection stage is the same as conventional backdoor attacks. Backdoor samples are fed into the target model through data uploading or learning requests, i.e., ${U\!pd}_{add}(D)$ in our definition.
-- Different from the existing backdoor attacks on MLaaS, UBA uses an explicit backdoor activation stage to enable the backdoor instead of assuming the backdoor is alive all the time. In this stage, the adversary uses unlearning requests to remove the camouflage, i.e., ${U\!pd}_{del}(D)$ in our definition.
+- The trigger injection stage is the same as conventional backdoor attacks. Backdoor samples are fed into the target model through data uploading or learning requests, i.e., ${Upd}_{add}(D)$ in our definition.
+- Different from the existing backdoor attacks on MLaaS, UBA uses an explicit backdoor activation stage to enable the backdoor instead of assuming the backdoor is alive all the time. In this stage, the adversary uses unlearning requests to remove the camouflage, i.e., ${Upd}_{del}(D)$ in our definition.
 - The backdoor exploitation stage is the same as conventional backdoor attacks. Samples with triggers can exploit the backdoor simply by querying the model through users' interface $\psi$.
 
 ---
