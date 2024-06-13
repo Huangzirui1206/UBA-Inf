@@ -18,8 +18,8 @@ In this paper, we report a new threat against models with unlearning enabled and
 You can run the following script to configurate necessary environment:
 
 ```shell
-conda create -n backdoorbench python=3.8
-conda activate backdoorbench
+conda create -n uba-inf python=3.8
+conda activate uba-inf
 sh ./sh/install.sh
 sh ./sh/init_folders.sh
 ```
