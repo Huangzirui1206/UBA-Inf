@@ -7,8 +7,8 @@ import os
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-os.chdir(sys.path[0])
-sys.path.append('../')
+#os.chdir(sys.path[0])
+sys.path.append('./')
 os.getcwd()
 
 
@@ -18,7 +18,6 @@ import torch
 from torch.utils.data import DataLoader
 
 from uba.uba_utils.basic_utils import model_test, get_dataset, get_surrogate_model
-
 
     
 def writeDataToCsv(path:str, data:list):
@@ -129,16 +128,16 @@ def main():
     #               model=model,
     #               args=args)
     
-    print(bd_train_m)
+    # print(bd_train_m)
     train_acc = bd_train_m['test_correct']/bd_train_m['test_total']
     print(f'train accuracy is {train_acc}')
         
-    print(clean_test_m)
+    # print(clean_test_m)
     test_acc = clean_test_m['test_correct']/clean_test_m['test_total']
     print(f'test clean accuracy is {test_acc}')
     
     asr = bd_test_m['test_correct']/bd_test_m['test_total']
-    print(bd_test_m)
+    # print(bd_test_m)
     print(f'test asr is {asr}')
     
     #cv_acc = cv_train_m['test_correct']/cv_train_m['test_total']

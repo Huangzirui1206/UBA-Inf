@@ -59,6 +59,9 @@ def add_common_attack_args(parser):
     
     parser.add_argument('--mode', type=str, default='equal') # TODO: To implement, for sisa aggregator strategy
     
+    parser.add_argument('--p_num', type=int)
+    parser.add_argument('--c_num', type=int)
+    
     # for sisa
     parser.add_argument("--num_shards", type=int, default=10)
     parser.add_argument("--num_slices", type=int, default=20) # TODO: To implement further functions, for now it is uesless
@@ -110,7 +113,23 @@ class BadNet(NormalCase):
             clean_index = np.array(np.where(train_indicator==0)).squeeze()
             bd_index = np.array(np.where(train_indicator==1)).squeeze()
             cv_index = np.array(np.where(train_indicator==2)).squeeze()
+
+            ## p_num and c_num as a higer priority
+            if args.__contains__('c_num'):
+                assert len(cv_index) >= args.c_num >= 0
+                cv_index = cv_index[:args.c_num]
+            else:
+                ... 
+                #cv_index = cv_index[:int(len(cv_index) *  args.cover_remaining_ratio)]
+            if args.__contains__('p_num'):
+                assert len(bd_index) >= args.p_num >= 0
+                bd_index = bd_index[:args.p_num]
+                
+            self.bd_index = bd_index
+            self.cv_index = cv_index
             
+            subset_index = list(bd_index) + list(cv_index) + list(clean_index)
+                        
             logging.info(f'bd samples: {len(bd_index)}; cv samples: {len(cv_index)}')
             
             bd_shards = []

@@ -70,7 +70,8 @@ from utils.bd_dataset_v2 import prepro_cls_DatasetBD_v2, dataset_wrapper_with_tr
 class LabelConsistent(BadNet):
     
     def __init__(self):
-        super().__init__(True)
+        self.cv_img_trans = True
+        super().__init__(True, cv_img_trans='train')
 
     def set_bd_args(cls, parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
 

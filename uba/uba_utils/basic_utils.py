@@ -88,7 +88,7 @@ def sisa_model_test(train_dl, clean_test_dl, bd_test_dl, model, args):
     return train_m, clean_test_m, bd_test_m
 
 def get_dataset_dict(args:argparse.ArgumentParser):
-    if args.__contains__('dataset_folder'):
+    if args.__contains__('dataset_folder') and args.dataset_folder:
         if args.__contains__('dataset_name'):
             result_path = args.dataset_folder + '/' + args.dataset_name
         else:
@@ -173,6 +173,16 @@ def get_surrogate_model(args:argparse.ArgumentParser):
             image_size=args.img_size[0],
         )
     
+    return net
+
+def get_model_directly_by_path(model_path):
+    result = torch.load(model_path)
+    net = generate_cls_model(
+        model_name=result['model_name'],
+        num_classes=result['num_classes'],
+        image_size=result['img_size'][0],
+    )
+    net.load_state_dict(result['model'])
     return net
 
 def get_attack_datasets(bd_train_dataset_with_transform, 

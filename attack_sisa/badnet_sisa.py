@@ -57,6 +57,9 @@ def add_common_attack_args(parser):
     parser.add_argument('--pratio', type=float,
                         help='the poison rate '
                         )
+    parser.add_argument('--p_num', type=float,
+                        help='the poison number '
+                        )
     # For UAB
     parser.add_argument('--add_cover', type=int,
                         help='Whether add adverserial-based covers'

@@ -42,7 +42,7 @@ from utils.bd_dataset_v2 import prepro_cls_DatasetBD_v2, dataset_wrapper_with_tr
 class SIG(BadNet):
     
     def __init__(self):
-        super().__init__(True)
+        super().__init__(True, cv_img_trans='train')
 
     def set_bd_args(cls, parser: argparse.ArgumentParser) -> argparse.ArgumentParser:
         parser = add_common_attack_args(parser)
