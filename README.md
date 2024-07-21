@@ -105,7 +105,7 @@ You can also implement other unlearning algorithms for further evaluation yourse
 
 ## More intermediate results and comprehensive demonstrations
 
-In some cases, constructing datasets and training models may consume intolerably exhausting time. For better reproductivity and evaluation, we provide some pre-trained models and related results on [google drive](https://drive.google.com/drive/u/0/folders/1NMrjpS7TqVHEBtKKF6HXZJSQ8BU8zMpU).
+In some cases, constructing datasets and training models may consume intolerably exhausting time. For better reproductivity and evaluation, we provide some pre-trained models and related results on [google drive](https://drive.google.com/drive/u/0/folders/1NMrjpS7TqVHEBtKKF6HXZJSQ8BU8zMpU) or anonymous share pCloud Transfer([result 1](https://transfer.pcloud.com/download.html?code=5ZubYP0Zdi1h4h7kDlJZQzHk7ZxTT766WonFRKP9xDRvv3ijjpdFXX) and [result 2](https://transfer.pcloud.com/download.html?code=5ZRhYP0Zdi1h4h7kDlJZQzHk7ZAxCy8MJSNfRSM718DTBnSLmppt3k)).
 
 ##### (1) Print results on terminal
 
