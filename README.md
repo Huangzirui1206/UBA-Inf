@@ -11,6 +11,18 @@ Machine-Learning-as-a-Service (MLaaS) is an emerging product to meet the market 
 
 In this paper, we report a new threat against models with unlearning enabled and implement an Unlearning Activated Backdoor Attack with Influence-driven camouflage (UBA-Inf). Unlike conventional backdoor attacks, UBA-Inf provides a new backdoor approach for effectiveness and stealthiness by activating the camouflaged backdoor through machine unlearning. The proposed approach can be implemented using off-the-shelf backdoor generating algorithms. Moreover, UBA-Inf is an ``on-demand'' attack, offering fine-grained control of backdoor activation through unlearning requests, overcoming backdoor vanishing and exposure problems. By extensively evaluating UBA-Inf, we conclude that UBA-Inf is a powerful backdoor approach that improves stealthiness, robustness, and persistence.
 
+For reference, you can turn to:
+
+```
+@inproceedings{huang2024uba,
+  title={$\{$UBA-Inf$\}$: Unlearning Activated Backdoor Attack with $\{$Influence-Driven$\}$ Camouflage},
+  author={Huang, Zirui and Mao, Yunlong and Zhong, Sheng},
+  booktitle={33rd USENIX Security Symposium (USENIX Security 24)},
+  pages={4211--4228},
+  year={2024}
+}
+```
+
 ---
 
 ## Installation & Requirements
@@ -168,3 +180,4 @@ In conclusion, we have made the following contributions:
 - UBA-Inf is compatible with existing backdoor generating algorithms, enhancing them in MLaaS scenarios.
 
 - UBA-Inf has been evaluated comprehensively. Evaluation results show that UBA-Inf achieves 4x persistence improvement with limited poisoning samples (2\% of the total training samples). The resistance to different defense methods has also been verified.
+
